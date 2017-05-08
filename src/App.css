@@ -1,0 +1,8 @@
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: rgb(188, 172, 143);
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace, sans-serif;
+}

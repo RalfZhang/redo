@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import Header from './containers/header.js';
+import Header from './containers/header';
+import Footer from './containers/footer.js';
+import Content from './containers/content.js';
+
+import './App.css';
+
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, www</h1>
-        <header/>
+        <Header />
+        {/*<Content />*/}
+        {/*<Footer />*/}
 
       </div>
     );
