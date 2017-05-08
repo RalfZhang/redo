@@ -20,6 +20,9 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
+    }, {
+      test: /\.css$/, // Only .css files
+      loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]' // Run both loaders
     }]
   }
 };
