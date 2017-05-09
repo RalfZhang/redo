@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        {/*<Content />*/}
+        <Content />
         {/*<Footer />*/}
 
       </div>
