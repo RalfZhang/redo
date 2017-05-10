@@ -14,6 +14,14 @@ import Divider from '../../components/Divider.js';
 
 
 export default class Movie extends Component {
+  componentDidMount(){
+    fetch('/api/movie/in_theaters')
+      .then(res => {
+        return res.json();
+      }).then( res => {
+        console.log('res', res)
+      })
+  }
   render() {
     return (
       <div>
