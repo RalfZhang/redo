@@ -6,12 +6,17 @@
  */
 
 import React, { Component } from 'react';
+import Movie from './movie/Movie.js'
+import style from './style.css';
+
 
 
 export default class Content extends Component {
   render() {
     return (
-      <div></div>
+      <div className={style.content}>
+        <Movie />
+      </div>
     )
   }
 }
