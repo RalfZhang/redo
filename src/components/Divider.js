@@ -7,10 +7,17 @@
 
 import React, { Component } from 'react';
 
+const styles = {
+  width: '100%',
+  height: '1px',
+  backgroundColor: '#555',
+  display: 'block'
+}
+
 export default class Divider extends Component {
   render(){
     return (
-      <div>divider</div>
+      <div style={styles}></div>
     )
   }
 }
