@@ -1,0 +1,27 @@
+.box {
+  padding: 10px 0;
+}
+.title {
+  display:  flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.text{
+  font-weight: 800;
+}
+.more{
+  font-weight: 800;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.subject {
+  width: 30%;
+  /*height: 0px;*/
+  /*padding-bottom: 50%;*/
+  /*background: #fff;*/
+  overflow: hidden;
+  position: relative;
+}
