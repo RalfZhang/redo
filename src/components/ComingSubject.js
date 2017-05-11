@@ -6,16 +6,19 @@
  */
 
 import React, { Component } from 'react';
+import styles from './subject.css'
 
-export default class ComingSubject extends Component {
-  render() {
+export default class Subject extends Component {
+  render(){
+
     return (
       
-      
-            <div className="subject">
-              <div className="img"></div>
-              <div className="name"></div>
-              <div className="time"></div>
+            <div className={styles.subject}>
+              <div className={styles.img}>
+                <img className={styles.src} src={this.props.data && this.props.data.images && this.props.data.images.large} />
+              </div>
+              <div className={styles.name}>{this.props.data && this.props.data.title}</div>
+              <div className={styles.star}></div>
             </div>
     )
   }
