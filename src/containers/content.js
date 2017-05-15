@@ -20,8 +20,8 @@ export default class Content extends Component {
     return (
       <div className={style.content}>
         content
-        <Route path='/movie' component={Movie}></Route>
-        <Route path='/book' component={Book}></Route>
+        {/*<Route path='/movie' component={Movie}></Route>
+        <Route path='/book' component={Book}></Route>*/}
 
       </div>
     )
