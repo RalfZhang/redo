@@ -6,11 +6,7 @@ import {
 
 import Header from './containers/header';
 import Footer from './containers/footer.js';
-import Content from './containers/content.js';
-
-import Movie from './containers/movie/Movie.js'
-
-import './App.css';
+import style from './App.css';
 
 
 
@@ -19,13 +15,9 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        {/*<Content></Content>*/}
-        <div className="content">
-          
-          <Route pattern="/movie" component={Movie} />
+        <div className={style.content}>
+          {this.props.children}
         </div>
-        {/*<Footer />*/}
-
       </div>
     );
   }
