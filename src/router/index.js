@@ -10,6 +10,7 @@ import {
 import App from '../App';
 import Movie from '../containers/movie/Movie'
 import Book from '../containers/book/Book'
+import Moment from '../containers/moment/Moment'
 
 
 function RouteNest(props){ return (
@@ -18,9 +19,10 @@ function RouteNest(props){ return (
 
 const Routers = props => (
   <Router >
-    <RouteNest  path={'/app'} component={App}>
-      <RouteNest  path={'/app/book'} component={Book}/>
-      <RouteNest  path={'/app/movie'} component={Movie}/>
+    <RouteNest  path={'/'} component={App}>
+      <RouteNest  path={'/book'} component={Book}/>
+      <RouteNest  path={'/movie'} component={Movie}/>
+      <RouteNest  path={'/moment'} component={Moment}/>
     </RouteNest>
   </Router >
 )
