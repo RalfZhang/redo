@@ -5,18 +5,10 @@
  * @version 1.0.0
  */
 
-/**
- * Body
- * @authors RalfZ (ralfz.zhang@gmail.com)
- * @date    2017-05-09 23:35:11
- * @version 1.0.0
- */
-
-
 import React, { Component } from 'react';
 
 
-export default class Movie extends Component {
+export default class Book extends Component {
   render() {
     return (
       <div>
