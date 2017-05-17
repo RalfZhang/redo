@@ -7,6 +7,9 @@
 
 
 import React, { Component } from 'react';
+import Type1 from './Type1'
+import Type2 from './Type2'
+import Type3 from './Type3'
 
 
 export default class Moment extends Component {
@@ -26,11 +29,30 @@ export default class Moment extends Component {
     return (
       <div>
         {
-          this.state.data.posts.map(e=> 
-            <div className="item">
-              {e.title}t
-            </div>
-          )
+          this.state.data.posts.map((e, i)=> {
+            if(e.display_style === 10001 || e.display_style === 10002){
+              return(
+                <div className="item" key={i}>
+                  {(e=>{
+                    switch(e.display_style){
+                      case 10001: 
+                        return <Type1 data={e} />;
+                      case 10002: 
+                        return <Type1 data={e} />;
+                      case 10003: 
+                        return <Type3 data={e} />;
+                    }
+                  })(e)}
+                <div style={{textAlign: 'center', display: 'flex', justifyContent: 'center', overflow: 'hidden'}}>
+                  <div style={{whiteSpace:'nowrap', lineHeight: '40px'}}>
+                    ---------------------------------------###---------------------------------------
+                  </div>
+                </div>
+                </div>
+              )
+            }
+
+          })
         }
       </div>
     )
