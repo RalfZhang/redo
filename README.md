@@ -2,6 +2,12 @@ https://segmentfault.com/a/1190000004530909
 
 https://react-guide.github.io/react-router-cn/docs/guides/
 
+router config
+http://stackoverflow.com/questions/42254929/how-to-nest-routes-in-react-router-v4
+
+router docs
+https://reacttraining.com/react-router/web/api/Switch
+
 
 >## A Big Update Is Coming
 
