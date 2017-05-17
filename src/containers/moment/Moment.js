@@ -6,7 +6,11 @@
  */
 
 
-import React, { Component } from 'react';
+import React, { Component } from 'react';import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 import Type1 from './Type1'
 import Type2 from './Type2'
 import Type3 from './Type3'
@@ -32,23 +36,25 @@ export default class Moment extends Component {
           this.state.data.posts.map((e, i)=> {
             if(e.display_style === 10001 || e.display_style === 10002){
               return(
-                <div className="item" key={i}>
-                  {(e=>{
-                    switch(e.display_style){
-                      case 10001: 
-                        return <Type1 data={e} />;
-                      case 10002: 
-                        return <Type1 data={e} />;
-                      case 10003: 
-                        return <Type3 data={e} />;
-                    }
-                  })(e)}
-                <div style={{textAlign: 'center', display: 'flex', justifyContent: 'center', overflow: 'hidden'}}>
-                  <div style={{whiteSpace:'nowrap', lineHeight: '40px'}}>
-                    ---------------------------------------###---------------------------------------
+                  <div className="item" key={i}>
+                <a href={e.url} style={{textDecoration: 'none', color: 'rgb(188, 172, 143)'}}>
+                    {(e=>{
+                      switch(e.display_style){
+                        case 10001: 
+                          return <Type1 data={e} />;
+                        case 10002: 
+                          return <Type1 data={e} />;
+                        case 10003: 
+                          return <Type3 data={e} />;
+                      }
+                    })(e)}
+                </a>
+                    <div style={{textAlign: 'center', display: 'flex', justifyContent: 'center', overflow: 'hidden'}}>
+                      <div style={{whiteSpace:'nowrap', lineHeight: '40px'}}>
+                        ---------------------------------------###---------------------------------------
+                      </div>
+                    </div>
                   </div>
-                </div>
-                </div>
               )
             }
 
