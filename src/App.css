@@ -1,22 +1,3 @@
-
-html, body{
-  margin: 0;
-  padding: 0;
-  background: #000;
-  color: rgb(188, 172, 143);
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace, sans-serif;
-}
-
-div, span, p{
-  font-size:20px
-}
-
-@media screen and (max-width: 500px){/* 可视区域小于 850px, 设置更小font-size属性 */
-   div, span, p{
-     font-size:16px;
-   }
-}
-
 .content {
   max-width: 700px;
   background: #111;
