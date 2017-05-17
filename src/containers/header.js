@@ -6,6 +6,9 @@
  */
 
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom'
 import styles from './style.css';
 
 const colorStyle = {
@@ -43,10 +46,18 @@ export default class Header extends Component {
       <div className={styles.header} >
         <div className={styles.logo}  style={colorStyle.light}>Redo</div>
         <div className={styles.tab}>
-          <div className={styles.item} style={colorStyle.blue} onClick={this.tabClick.bind(this)}>电影</div>
-          <div className={styles.item} style={colorStyle.red} onClick={this.tabClick.bind(this)}>读书</div>
-          <div className={styles.item} style={colorStyle.yellow} onClick={this.tabClick.bind(this)}>音乐</div>
-          <div className={styles.item} style={colorStyle.green} onClick={this.tabClick.bind(this)}>一刻</div>
+          <Link className={styles.nodr} to="/moment">
+            <div className={styles.item} style={colorStyle.red} onClick={this.tabClick.bind(this)}>一刻</div>
+          </Link>
+          <Link className={styles.nodr} to="/movie">
+            <div className={styles.item} style={colorStyle.blue} onClick={this.tabClick.bind(this)}>电影</div>
+          </Link>
+          <Link className={styles.nodr} to="/book">
+            <div className={styles.item} style={colorStyle.yellow} onClick={this.tabClick.bind(this)}>读书</div>
+          </Link>
+          <Link className={styles.nodr} to="/about">
+            <div className={styles.item} style={colorStyle.green} onClick={this.tabClick.bind(this)}>关于</div>
+          </Link>
         </div>
       </div>
     );
