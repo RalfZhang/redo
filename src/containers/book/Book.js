@@ -12,7 +12,7 @@ export default class Book extends Component {
   render() {
     return (
       <div>
-        boook
+        Coming soon...
       </div>
     )
   }
