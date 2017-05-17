@@ -2,6 +2,7 @@
   padding: 5px 0;
 }
 .title {
+  cursor: pointer;
   padding: 5px 0; 
   user-select: none;
 }
