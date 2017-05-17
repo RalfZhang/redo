@@ -20,9 +20,28 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
-    }, {
+    }, 
+    // {
+    //   test: /base\.css$/, // Only .css files
+    //   loader: 'style!css', // Run both loaders
+    //   include: path.join(__dirname, 'src')
+    // }, {
+    //   test: /(?<!base)\.css$/, // Only .css files
+    //   loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]', // Run both loaders
+    //   include: path.join(__dirname, 'src')
+    // }, 
+    {
+      // test: /base.css$/,
+      loaders: ['style', 'css'],
+      include: path.resolve(__dirname, 'src/base.css')
+    },
+    {
       test: /\.css$/, // Only .css files
-      loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]' // Run both loaders
-    }]
+      loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]', // Run both loaders
+      include: path.join(__dirname, 'src'),
+      exclude: [ path.resolve(__dirname, 'src/base.css')]
+    }
+    ]
+
   }
 };
