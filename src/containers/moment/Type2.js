@@ -19,6 +19,7 @@ export default class Type2 extends Component {
           {this.props.data.author.name}
         </div>
     }
+    /*
     let src='';
     let img = this.props.data.thumbs[0].large.url;
     window.a=axios;
@@ -36,6 +37,7 @@ export default class Type2 extends Component {
         src=urlCreator.createObjectURL(e)
       }
     )
+     */
     return (
       <div className={styles.content}>
         <div className={'big-font '+styles.title}>
